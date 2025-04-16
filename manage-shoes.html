@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="manage-shoes.css">
+    <title>Manage Shoes</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form-section">
+            <form action="addshoe.php" method="post">
+
+                <h3>Add New Shoe Product</h3>
+                <input type="text" placeholder="Brand" name="brand" class="box" required><br>
+                <input type="text" placeholder="Name" name = "name" class="box" required><br>
+                <input type="text" placeholder="Description" name = "description" class="box" required><br>
+                <input type="text" placeholder="Size" name = "size" class="box" required><br>
+                <input type="text" placeholder="Color" name = "color" class="box" required><br>
+                <input type="text" placeholder="Price" name = "price" class="box" required><br>
+                <input type="file" placeholder="Upload Image" name="image" accept="image/*" class="box" required><br>
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
+
+        <div class="table-section">
+            <table>
+                <tr>
+                    <th>Brand</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Size</th>
+                    <th>Color</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                </tr>
+                <?php include 'display.php'; ?>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

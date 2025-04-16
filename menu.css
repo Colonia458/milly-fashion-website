@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Pixelify+Sans&family=Young+Serif&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Onest', sans-serif;
+}
+
+/* THE FIRST SECTION CODE BEGINS HERE */
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(Pictures/pexels-scott-webb-1931149.jpg);
+    background-size: cover; /* Adjust as needed to cover the entire viewport */
+    background-position: center;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    font-size: 50px;
+    font-family: 'DM Serif Display', serif;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: large;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.7s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    font-family: 'Onest', serif;
+    width: 90%;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.text-box span{
+    position: relative;
+}
+
+.text-box span::before{
+    content: "Milly's Collections";
+    color: red;
+    animation: words 20s infinite;
+}
+
+.text-box span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #f3f3f3;
+    border-left:2px solid #ff7f50;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 2px solid #ff7f5000;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Fashion";
+    }
+    21%, 40%{
+        content: "Style";
+    }
+    41%, 60%{
+        content: "Design";
+    }
+    61%, 80%{
+        content: "Classic";
+    }
+    81%, 100%{
+        content: "Milly's Collections";
+    }
+}
+
+@keyframes typing{
+   10%, 15%, 30%,35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+   } 
+   5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%,85%,100%{
+    width: calc(100% + 8px);
+   }
+}
+
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: white;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+
+    }
+    nav .fa{
+        display: block;
+        color: black;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding:30px;
+    }
+    
+}
+
+
+/* LOGOS CODE IS HERE BUT IT'S STILL WITHIN THE HEADER SECTION. I CHANGED IT LATER TO THE BOTTOM OF THE PAGE NEXT TO ABOUT US SECTION */
+@keyframes slide{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+@keyframes slideRight{
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%); /* Change the percentage to control how far the text moves */
+    }
+}
+
+.logo-slideleft{
+    display: inline-block;
+    white-space: nowrap;
+    animation: 10s slide infinite linear;
+}
+
+.logos:hover .logo-slideleft {
+    animation-play-state: paused;
+}
+
+.logos{
+    overflow: hidden;
+    padding:  0 0;
+    background: rgb(245, 6, 6);
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 50%;
+    background: linear-gradient( to left, rgba(255,255,255,0) white);
+    content: "";
+    z-index: 2;
+}
+
+.logos::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 50%;
+    background: linear-gradient( to right, rgba(255,255,255,0) white);
+    content: "";
+    z-index: 2;
+}
+
+.logo-slideleft img{
+    height: 40px;
+    margin: 0 50px;
+}
+
+/* FIRST SECTION WITH TYPEWRITER EFFECT ENDS HERE */
+
+/* FASHION CATEGORIES (REVIEWS FROM THE FIRST WEBPAGE) CODE BEGINS HERE */
+.categories{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.categories h1{
+    font-size: large;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+.fashion-col{
+    flex-basis: 32%;
+    border-radius: 0px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.fashion-col img{
+    width: 100%;
+    display:block;
+}
+
+.layer {
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer2 {
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer3 {
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background:  #ffa069b0;
+    transition: 0.5s;
+}
+
+.layer2:hover{
+    background: #c70038b6;
+    transition: 0.5s;
+}
+
+.layer3:hover{
+    background: #141e46c0;
+    transition: 0.5s;
+}
+
+.layer h1{
+    width: 100%;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    font-size: 50px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position:absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h1{
+    bottom: 49%;
+    opacity: 1;
+}
+
+.layer2 h1{
+    width: 100%;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    font-size: 50px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position:absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer2:hover h1{
+    bottom: 49%;
+    opacity: 1;
+}
+.layer3 h1{
+    width: 100%;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    font-size: 50px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position:absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer3:hover h1{
+    bottom: 49%;
+    opacity: 1;
+}
+
+/* CATEGORIES CODE ENDS HERE */
+
+
+
+/* BLOGS/FACILITIES SECTION CODE BEGINS HERE */
+.blogs{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 1px;
+}
+
+.blog-col{
+    flex-basis: 31%;
+    border-radius: 5px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.blog-col img{
+    width: 100%;
+    border-radius: 5px;
+    height: auto;
+}
+
+.blog-col p{
+    padding: 0;
+}
+
+.blog-col h3{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-align: left;
+}
+
+
+/* BLOGS/FACILITIES SECTION CODE ENDS HERE */
+
+
+/* FOOTER SECTION CODE STARTS HERE */
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    background: #1a242f;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.footer-content{
+    margin-top: 5px;
+}
+
+.footer-content h4{
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-family: 'Abril Fatface', serif;
+    font-size: 24pt;
+    text-align: center;
+}
+
+.footer-content li{
+    margin-bottom: 16px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.footer-content li a{
+    display: block;
+    color: #d6d6d6;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all .40s ease;
+}
+
+.footer-content li a:hover{
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.footer-content p{
+    color: white;
+}
+
+.icons a{
+    display: inline-block;
+    font-size: 22px;
+    color: #d6d6d6;
+    margin-right: 17px;
+    transition: all .40s ease;
+}
+
+.icons a:hover{
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* FOOTER SECTION CODE ENDS HERE */
+
+
+
+
+/* VIDEO CODE STARTS HERE */
+/* .video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content{
+    text-align: center;
+    color: white;
+    position: absolute;
+    text-align: center;
+    color: #fff; Text color 
+    padding: 20px;
+}  
+
+/* VIDEO CODE ENDS HERE */

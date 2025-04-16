@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="addshoe.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <title>Add Shoe Product</title>
+</head>
+<body>
+
+<h2 class="stamp">ADD SHOE PRODUCT</h2>
+
+<div class="addshoe">
+<form id ="addshoeform"  action="addshoe.php" method="post" enctype="multipart/form-data">
+        <label for="brand">Brand:</label>
+        <input type="text" name="brand" required><br>
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+    
+        <label for="description">Description:</label>
+        <input type='text' name="description" required><br>
+
+        <label for="size">Size:</label>
+        <input type="text" name="size" required><br>
+        
+    
+        <label for="color">Color:</label>
+        <input type="text" name="color" required><br>
+
+        <label for="price">Price:</label>
+        <input type="text" name="price" required><br>
+
+        <label for="image">Image:</label>
+        <input type="file" name="image" accept="image/*" required><br>
+
+    <button type="submit">Add Product</button>
+</form>
+</div>
+
+<a class="back" href="dashboard.html">
+    BACK TO DASHBOARD
+</a>
+
+<script>
+    document.getElementById("addshoeform").onsubmit = function(event) {
+    event.preventDefault(); // Prevent form submission
+    
+    // Display popup message
+    alert("Form details have been added.");
+    
+    // Clear form fields
+    document.getElementById("myForm").reset();
+    
+    // Refresh the page after 2 seconds
+    setTimeout(function() {
+        location.reload();
+    }, 2000);
+};
+</script>
+
+</body>
+</html>

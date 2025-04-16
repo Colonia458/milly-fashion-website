@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="displayuser.css">
+</head>
+<body>
+    <div class="container">
+        <div class="user-profile">
+            <p>WELCOME, <span class="uname"></span>!</p>
+            <div class="profile-info">
+                <div class="profile-image">
+                    <img src="profile_pic_placeholder.jpg" alt="Profile Picture">
+                </div>
+                <div class="profile-details">
+                    <div class="detail">
+                        <label>Username:</label>
+                        <span id="username">Loading...</span>
+                    </div>
+                    <div class="detail">
+                        <label>Email:</label>
+                        <span id="email">Loading...</span>
+                    </div>
+                    <div class="detail">
+                        <label>Phone Number:</label>
+                        <span id="phone">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Fetch user data from PHP file using AJAX
+            $.ajax({
+                url: "fetch_user_data.php",
+                type: "GET",
+                dataType: "json",
+                success: function(data) {
+                    // Populate user profile with fetched data
+                    $("#uname").text(data.uname);
+                    $("#email").text(data.email);
+                    $("#pnumber").text(data.pnumber);
+                    $(".profilepic").attr("src", data.profilepic);
+                },
+                error: function(xhr, status, error) {
+                    console.error("Failed to fetch user data: " + error);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

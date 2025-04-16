@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Manrope', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+header{
+    position:relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    text-decoration: none;
+}
+
+header p{
+    font-family: 'Abril Fatface', serif;
+    font-size: 40pt;
+    font-weight: 700;
+    color: #f71735;
+    text-align: center;
+}
+
+.logo img{
+    max-width: 120px;
+    height: auto;
+}
+
+.nav-menu{
+    display: flex;
+    position: sticky;
+}
+
+.nav-menu a{
+    color: #000000;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 800;
+    transition: all .42s ease;
+}
+
+.nav-menu a:hover{
+    color: #f71735;
+}
+
+.nav-icons i{
+    margin-right: 20px;
+    color: #000000;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+
+.nav-icons i:hover{
+    transform: scale(1.1);
+    color: #f71735;
+}
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.shoe-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+
+.shoe{
+    font-family: 'Archivo', sans-serif;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.shoe img{
+    width: 100%;
+    height: 300px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.shoe-details{
+    padding: 20px;
+}
+
+.shoe h3 {
+    font-variant: small-caps;
+    text-transform: lowercase ;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #f71735;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.shoe .price{
+    font-size: 20px;
+    line-height: 1.2;
+    padding-bottom: 1rem;
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: bold;
+    color: #000000;
+}
+.shoe p {
+    margin: 5px 0;
+}
+
+button{
+    font-family: 'Manrope', sans-serif;
+    width: 180px;
+    height: 35px;
+    background: #f71735;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;  
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+
+button:hover{
+    background: green;
+    transition: 0.5s;
+    color: white;
+    opacity: 0.82;
+}
+
+.shoe .shoepic{
+    height: 100px;
+    width: 100px;
+}

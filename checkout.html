@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="checkout.css"> <!-- Link your CSS file here -->
+</head>
+<body>
+    <div class="container">
+        <h2>Checkout Form</h2>
+        <form action="checkout.php" method="POST">
+            <label for="shoeid">Shoe ID:</label>
+            <input type="text" id="shoeid" name="shoeid" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" required>
+
+            <label for="pnumber">Phone Number:</label>
+            <input type="text" id="pnumber" name="pnumber" required>
+
+            <input type="submit" value="Submit Order">
+        </form>
+    </div>
+</body>
+</html>

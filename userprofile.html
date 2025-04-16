@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <link rel="stylesheet" href="userprofile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <title>User Profile</title>
+</head>
+<body>
+    <!-- The header is the navigation bar for the website, and the entire project -->
+    <header>
+        <a href="menu.html" class="logo"><img src="Milly logo pink.png" alt="logo"></a>
+
+        <p>USER PROFILE PAGE</p>
+    </header>
+
+    <section class="container">
+        <h2>Edit User Profile</h2>
+        <form action="userprofile.php" method="POST" enctype="multipart/form-data">
+            <label for="uname">Username:</label>
+            <input type="text" id="uname" name="uname" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="pnumber">Phone Number:</label>
+            <input type="text" id="pnumber" name="pnumber" required>
+
+            <label for="password">Change Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="password">Confirm New Password:</label>
+            <input type="password" id="password" name="passwordc" required>
+
+            <label for="profilepic">Profile Picture:</label>
+            <input type="file" id="profilepic" name="profilepic" accept="image/*"> 
+
+            <br>
+
+            <input type="submit" value="UPDATE DETAILS">
+        </form>
+    </section>
+</body>
+</html>

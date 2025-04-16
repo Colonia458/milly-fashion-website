@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Onest', sans-serif;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(Pictures/Banners/domino-164_6wVEHfI-unsplash.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.addshoe{
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(50px);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.row-1{
+    display: flex;
+    flex-direction: column;
+}
+
+.row-2{
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    width: 100%;
+    height: 35px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;  
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+button:hover{
+    background: green;
+    transition: 0.5s;
+    color: white;
+    opacity: 0.82;
+}
+
+label{
+    color: white;
+    text-transform: uppercase;
+}
+
+.stamp{
+    color: white;
+    border: 2px black solid;
+    backdrop-filter: grayscale(1);
+    margin-bottom: 10px;
+}
+
+.back{
+    margin: 15px;
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+/* NEW FORM DESIGN */
+.input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: transparent;
+}
+.input-box .input-field{
+    position: relative;
+    width: 50%;
+    background: transparent;
+    margin: 3px 0;
+}
+.input-box .input-field input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    font-size: 12pt;
+    color: white;
+    border-radius: 6px;
+}
+
+.input-box .input-field input::placeholder{
+    color: #fff;
+}
+
+.input-box .input-field i{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+
+
+/* TABLE VIEW */
+.product-display{
+    position: relative;
+    margin: 2rem 0 ;
+}
+
+.product-display .product-display-table{
+    width: 100%;
+}
+
+.product-display .product-display-table thead{
+    padding: 1rem;
+    font-size: 1rem;
+}
+

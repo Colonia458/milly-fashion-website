@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <title>Milly's Collections - Login</title>
+
+</head>
+<body>
+    <div class="headline">
+    <div class="logo">
+        <img src="Milly logo white.png" alt="logo">
+    </div>
+    </div>
+    <div class="login">
+        <form action="login.php" method="post">
+            <h1>USER LOGIN</h1>
+            <div class="input-box">
+                <input type="text" name="uname" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <div class="remember-forgot">
+                <label for="">
+                    <input type="checkbox" id ="showPassword">
+                    SHOW PASSWORD
+                </label>
+            </div>
+
+            <button type="submit" class="btn">LOGIN</button>
+
+            <div class="register-link">
+                <p>
+                    Don't have an account?
+                </p>
+                <a href="register.html">Sign Up Here</a>
+            </div>
+
+            <div class="register-link">
+                <a href="start.html">Back To Start Page</a>
+            </div>
+
+            <script>
+            document.getElementById("showPassword").onclick = function() {
+                var passwordField = document.getElementById("password");
+                if (passwordField.type === "password") {
+                    passwordField.type = "text";
+                } else {
+                    passwordField.type = "password";
+                }
+            };
+        </script>
+        </form>
+    </div>
+</body>
+</html>

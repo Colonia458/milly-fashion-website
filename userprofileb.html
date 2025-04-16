@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User Profile</title>
+    <link rel="stylesheet" href="userprofile.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Edit User Profile</h2>
+        <form action="userprofile.php" method="POST" enctype="multipart/form-data">
+            <label for="uname">Username:</label>
+            <input type="text" id="uname" name="uname" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="pnumber">Phone Number:</label>
+            <input type="text" id="pnumber" name="pnumber" required>
+
+            <label for="password">Change Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="password">Confirm Password:</label>
+            <input type="password" id="password" name="passwordc" required>
+
+            <label for="profilepic">Profile Picture:</label>
+            <input type="file" id="profilepic" name="profilepic" accept="image/*">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
