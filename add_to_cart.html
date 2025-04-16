@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    h1 {
+        text-align: center;
+    }
+    .cart-item {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+    }
+    .cart-item img {
+        width: 100px;
+        height: auto;
+        margin-right: 20px;
+    }
+    .cart-item-details {
+        flex-grow: 1;
+    }
+    .cart-item-details h3 {
+        margin: 0;
+    }
+    .cart-item-details p {
+        margin: 5px 0;
+    }
+    .cart-total {
+        text-align: right;
+        margin-top: 20px;
+    }
+    .cart-total p {
+        margin: 5px 0;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Shopping Cart</h1>
+    <div class="cart-items">
+        <!-- Sample cart items -->
+        <div class="cart-item">
+            <img src="product1.jpg" alt="Product 1">
+            <div class="cart-item-details">
+                <h3>Product 1</h3>
+                <p>Price: $10.00</p>
+                <p>Quantity: 2</p>
+                <p>Total: $20.00</p>
+            </div>
+        </div>
+        <div class="cart-item">
+            <img src="product2.jpg" alt="Product 2">
+            <div class="cart-item-details">
+                <h3>Product 2</h3>
+                <p>Price: $15.00</p>
+                <p>Quantity: 1</p>
+                <p>Total: $15.00</p>
+            </div>
+        </div>
+        <!-- Add more cart items as needed -->
+    </div>
+    <div class="cart-total">
+        <p>Total: $35.00</p>
+    </div>
+</div>
+</body>
+</html>
